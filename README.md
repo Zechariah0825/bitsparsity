@@ -1,6 +1,3 @@
-### README.md
-
-```markdown
 # bitsparsity
 
 ## 项目简介
