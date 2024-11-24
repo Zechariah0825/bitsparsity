@@ -96,8 +96,8 @@ python print_orgin.py --model_dir "/path/to/model" --cuda_node 0 --batch_size 4 
 
 在 `bitmodify.ipynb` 中，可以通过定义模型目录、位指数和概率，执行位级别的模型修改。步骤包括加载模型、修改位概率、保存修改后的模型及概率数据。
 
-### 调整后的accuracy评估
-可以使用lm-eval工具快速评估经过bit位级调整后的model accuracy，项目链接是https://github.com/EleutherAI/lm-evaluation-harness，再bitmodify.ipynb中有示例调用，可以参考：
+### 进行bit级调整后模型的accuracy评估
+可以使用lm-eval工具快速评估经过bit位级调整后的model accuracy，项目链接是"https://github.com/EleutherAI/lm-evaluation-harness"，在bitmodify.ipynb中有示例调用，可以参考：
 ```bash
 #这里使用了lm-eval项目做accuracy评测，可以在github中找到
 lm_eval --model hf     --model_args pretrained=/data/gaozh/SPA/llama-7b-strategy_1     --tasks mmlu     --batch_size auto  --output_path "/data/gaozh/SPA/llama-7b-strategy_1/output/"
@@ -119,4 +119,3 @@ model, tokenizer = load_llama_model(model_dir)
 
 注意这样做要先修改下huggingface的cache位置到容量大的盘，比如本实验室的/data
 ```
-# bitsparsity
